@@ -8,8 +8,8 @@
 	<controls>
 		<include>BehindDialogFadeOut</include>
 		<control type="group">
-			<posx>48</posx>
-			<posy>500r</posy>
+			<posx>8</posx>
+			<posy>480r</posy>
 			<animation effect="slide" start="0,610" end="0,0" time="400" easing="out" tween="quadratic" >WindowOpen</animation>
 			<animation effect="slide" start="0,0" end="0,610" time="400" easing="in" tween="quadratic" >WindowClose</animation>
 			<include>16x9_xPos_Relocation</include>
@@ -18,7 +18,7 @@
 				<control type="image">
 					<posx>0</posx>
 					<posy>-170</posy>
-					<width>1184</width>
+					<width>780</width>
 					<height>60</height>
 					<texture border="5">dialog_header.png</texture>
 				</control>
@@ -26,13 +26,13 @@
 					<description>coding text input</description>
 					<posx>20</posx>
 					<posy>-170</posy>
-					<width>1144</width>
+					<width>780</width>
 					<include>WindowTitleCommons</include>
 				</control>
 				<control type="image">
 					<posx>0</posx>
 					<posy>-110</posy>
-					<width>1184</width>
+					<width>780</width>
 					<height>60</height>
 					<aspectratio>stretch</aspectratio>
 					<texture>dialog_back.png</texture>
@@ -41,7 +41,7 @@
 					<description>coding text choices</description>
 					<posx>0</posx>
 					<posy>-110</posy>
-					<width>1144</width>
+					<width>780</width>
 					<height>60</height>
 					<font>font25</font>
 					<textcolor>white</textcolor>
@@ -52,7 +52,7 @@
 			<control type="image">
 				<posx>0</posx>
 				<posy>-50</posy>
-				<width>1184</width>
+				<width>780</width>
 				<height>60</height>
 				<texture>dialog_header.png</texture>
 			</control>
@@ -65,13 +65,13 @@
 				<description>dialog Heading</description>
 				<posx>20</posx>
 				<posy>-50</posy>
-				<width>1144</width>
+				<width>780</width>
 				<include>WindowTitleCommons</include>
 			</control>
 			<control type="image">
 				<posx>0</posx>
 				<posy>10</posy>
-				<width>1184</width>
+				<width>780</width>
 				<height>456</height>
 				<aspectratio>stretch</aspectratio>
 				<texture>dialog_back.png</texture>
@@ -80,7 +80,7 @@
 				<description>Edit Text</description>
 				<posx>0</posx>
 				<posy>10</posy>
-				<width>1144</width>
+				<width>780</width>
 				<height>60</height>
 				<font>font25</font>
 				<align>center</align>
@@ -93,7 +93,7 @@
 				<posy>70</posy>
 				<!-- First Row -->
 				<control type="grouplist">
-					<width>1184</width>
+					<width>780</width>
 					<align>center</align>
 					<orientation>horizontal</orientation>
 					<itemgap>4</itemgap>
@@ -172,9 +172,9 @@
 					<control type="button" id="112">
 						<description>(0,12) key button</description>
 						<onup>306</onup>
-                                                <ondown>132</ondown>
-                                                <include>KeyboardButton</include>
-                                        </control>
+						<ondown>132</ondown>
+						<include>KeyboardButton</include>
+					</control>
 					<control type="group">
 						<posx>0</posx>
 						<posy>0</posy>
@@ -207,7 +207,7 @@
 				<!-- Second Row -->
 				<control type="grouplist">
 					<posy>80</posy>
-					<width>1184</width>
+					<width>780</width>
 					<align>center</align>
 					<orientation>horizontal</orientation>
 					<itemgap>4</itemgap>
@@ -322,7 +322,7 @@
 				<!-- Third Row -->
 				<control type="grouplist">
 					<posy>160</posy>
-					<width>1184</width>
+					<width>780</width>
 					<align>center</align>
 					<orientation>horizontal</orientation>
 					<itemgap>4</itemgap>
@@ -425,7 +425,7 @@
 				<!-- Forth Row -->
 				<control type="grouplist">
 					<posy>240</posy>
-					<width>1184</width>
+					<width>780</width>
 					<align>center</align>
 					<orientation>horizontal</orientation>
 					<itemgap>4</itemgap>
@@ -540,7 +540,7 @@
 				<!-- Fifth Row -->
 				<control type="grouplist">
 					<posy>320</posy>
-					<width>1184</width>
+					<width>780</width>
 					<align>center</align>
 					<orientation>horizontal</orientation>
 					<itemgap>4</itemgap>

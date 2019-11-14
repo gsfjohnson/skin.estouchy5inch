@@ -182,17 +182,6 @@
 				</focusedlayout>
 				<content>
 					<item>
-						<label>13012</label>
-						<onclick>Shutdown</onclick>
-						<icon>icon_button_shutdown.png</icon>
-					</item>
-					<item>
-						<label>20126</label>
-						<onclick>System.LogOff</onclick>
-						<icon>icon_button_logoff.png</icon>
-						<visible>System.HasLoginScreen | Integer.IsGreater(System.ProfileCount,1)</visible>
-					</item>
-					<item>
 						<label>5</label>
 						<onclick>ActivateWindow(Settings)</onclick>
 						<icon>icon_button_settings.png</icon>
