@@ -138,11 +138,11 @@
 			<include>HomeMenu</include>
 			<control type="panel" id="9002">
 				<posx>5</posx>
-				<posy>70</posy>
+				<posy>0</posy>
 				<animation effect="fade" start="100" end="0" time="300" condition="Window.Next(Home)">WindowClose</animation>
 				<animation effect="fade" end="100" start="0" time="300" condition="Window.Previous(Home)">WindowOpen</animation>
 				<animation effect="slide" start="0,0" end="60,0" time="0" condition="String.IsEqual(Container(9002).NumItems,3)">conditional</animation>
-				<width>900</width>
+				<width>400</width>
 				<height>120</height>
 				<onleft>9002</onleft>
 				<onright>9002</onright>

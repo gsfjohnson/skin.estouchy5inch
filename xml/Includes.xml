@@ -91,12 +91,16 @@
 	<include name="ScreenWidth">
 		<include condition="String.IsEqual(Skin.AspectRatio,16:9)">ScreenWidth-16x9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">ScreenWidth-4x3</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,5:3)">ScreenWidth-5x3</include>
 	</include>
 	<include name="ScreenWidth-16x9">
 		<width>1706</width>
 	</include>
 	<include name="ScreenWidth-4x3">
 		<width>1280</width>
+	</include>
+	<include name="ScreenWidth-5x3">
+		<width>800</width>
 	</include>
 	<include name="CommonBackground">
 		<control type="image">
@@ -240,7 +244,7 @@
 				<textcolor>white</textcolor>
 				<align>right</align>
 				<aligny>center</aligny>
-				<label>$INFO[System.Time]</label>
+				<label>$INFO[System.Time]</label>z
 			</control>
 		</control>
 	</include>
@@ -763,12 +767,6 @@
 						<icon>icon_menu_addons.png</icon>
 						<visible>!Skin.HasSetting(HideHomeButtonPrograms)</visible>
 					</item>
-					<item>
-						<label></label>
-						<onclick>ActivateWindow(Games)</onclick>
-						<icon>icon_menu_games.png</icon>
-						<visible>!Skin.HasSetting(HideHomeButtonGames)</visible>
-					</item>
 				</content>
 			</control>
 		</control>
@@ -779,17 +777,17 @@
 				<description>Menu Panel</description>
 				<posx>-5</posx>
 				<posy>-5</posy>
-				<width>510</width>
-				<height>970</height>
+				<width>301</width>
+				<height>480</height>
 				<texture>panel.png</texture>
 				<bordertexture border="6">panel_shadow.png</bordertexture>
 				<bordersize>5</bordersize>
 			</control>
 			<control type="fixedlist" id="9000">
 				<posx>0</posx>
-				<posy>200</posy>
-				<width>500</width>
-				<height>760</height>
+				<posy>120</posy>
+				<width>301</width>
+				<height>480</height>
 				<onleft>9000</onleft>
 				<onright>9003</onright>
 				<onup>9002</onup>
@@ -798,7 +796,7 @@
 				<orientation>vertical</orientation>
 				<focusposition>1</focusposition>
 				<movement>2</movement>
-				<itemlayout height="155" width="500">
+				<itemlayout height="155" width="301">
 					<control type="image">
 						<posx>-6</posx>
 						<posy>18</posy>
@@ -818,11 +816,11 @@
 						<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
 					</control>
 				</itemlayout>
-				<focusedlayout height="155" width="500">
+				<focusedlayout height="155" width="301">
 					<control type="image">
 						<posx>0</posx>
 						<posy>0</posy>
-						<width>500</width>
+						<width>301</width>
 						<height>155</height>
 						<texture>list_focus.png</texture>
 						<visible>Control.HasFocus(9000)</visible>
@@ -863,41 +861,11 @@
 	</include>
 	<include name="HomeMainMenuItems">
 		<item>
-			<label>31556</label>
-			<onclick>ActivateWindow(TVChannels)</onclick>
-			<icon>icon_menu_livetv.png</icon>
-			<thumb></thumb>
-			<visible>System.HasPVRAddon + !Skin.HasSetting(HideHomeButtonLiveTV)</visible>
-		</item>
-		<item>
 			<label>19021</label>
 			<onclick>ActivateWindow(RadioChannels)</onclick>
 			<icon>icon_menu_radio.png</icon>
 			<thumb></thumb>
 			<visible>System.HasPVRAddon + !Skin.HasSetting(HideHomeButtonRadio)</visible>
-		</item>
-		<item>
-			<label>20342</label>
-			<onclick>ActivateWindow(Videos,MovieTitles,Return)</onclick>
-			<icon>icon_menu_movies.png</icon>
-			<thumb></thumb>
-			<visible>Library.HasContent(Movies)</visible>
-			<visible>!Skin.HasSetting(HideHomeButtonMovies)</visible>
-		</item>
-		<item>
-			<label>20343</label>
-			<onclick>ActivateWindow(Videos,TVShowTitles,Return)</onclick>
-			<icon>icon_menu_tvshows.png</icon>
-			<thumb></thumb>
-			<visible>Library.HasContent(TVShows)</visible>
-			<visible>!Skin.HasSetting(HideHomeButtonTVShows)</visible>
-		</item>
-		<item>
-			<label>3</label>
-			<onclick>ActivateWindow(Videos,Root,Return)</onclick>
-			<icon>icon_menu_videos.png</icon>
-			<thumb></thumb>
-			<visible>!Skin.HasSetting(HideHomeButtonVideo)</visible>
 		</item>
 		<item>
 			<label>2</label>
@@ -907,25 +875,11 @@
 			<visible>!Skin.HasSetting(HideHomeButtonMusic)</visible>
 		</item>
 		<item>
-			<label>1</label>
-			<onclick>ActivateWindow(Pictures)</onclick>
-			<icon>icon_menu_pictures.png</icon>
-			<thumb></thumb>
-			<visible>!Skin.HasSetting(HideHomeButtonPictures)</visible>
-		</item>
-		<item>
 			<label>24001</label>
 			<onclick>ActivateWindow(Programs,Addons,return)</onclick>
 			<icon>icon_menu_addons.png</icon>
 			<thumb></thumb>
 			<visible>!Skin.HasSetting(HideHomeButtonPrograms)</visible>
-		</item>
-		<item>
-			<label>15016</label>
-			<onclick>ActivateWindow(Games)</onclick>
-			<icon>icon_menu_games.png</icon>
-			<thumb></thumb>
-			<visible>System.GetBool(gamesgeneral.enable) + !Skin.HasSetting(HideHomeButtonGames)</visible>
 		</item>
 		<item>
 			<label>8</label>
@@ -1562,9 +1516,9 @@
 		<control type="panel" id="9000">
 			<include>Window_OpenClose_Animation_Zoom</include>
 			<posx>$PARAM[panel-posx]</posx>
-			<posy>100</posy>
+			<posy>$PARAM[panel-posy]</posy>
 			<width>$PARAM[panel-width]</width>
-			<height>750</height>
+			<height>$PARAM[panel-height]</height>
 			<onleft>9000</onleft>
 			<onright>9001</onright>
 			<onup>9000</onup>

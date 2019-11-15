@@ -65,6 +65,10 @@
 				<param name="panel-width">890</param>
 				<param name="textbox-width">860</param>
 			</include>
+			<include content="ProfilesContent" condition="String.IsEqual(Skin.AspectRatio,5:3)">
+				<param name="panel-width">690</param>
+				<param name="textbox-width">660</param>
+			</include>
 		</control>
 		<include>Header</include>
 		<include>CommonNowPlaying</include>

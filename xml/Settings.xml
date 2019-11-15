@@ -6,12 +6,23 @@
 		<include>CommonBackground</include>
 		<include content="SettingsPanel" condition="String.IsEqual(Skin.AspectRatio,16:9)">
 			<param name="panel-posx">160</param>
+			<param name="panel-posy">100</param>
 			<param name="panel-width">1500</param>
+			<param name="panel-height">750</param>
 			<param name="layout-width">500</param>
 		</include>
 		<include content="SettingsPanel" condition="String.IsEqual(Skin.AspectRatio,4:3)">
 			<param name="panel-posx">40</param>
+			<param name="panel-posy">100</param>
 			<param name="panel-width">1200</param>
+			<param name="panel-height">750</param>
+			<param name="layout-width">400</param>
+		</include>
+		<include content="SettingsPanel" condition="String.IsEqual(Skin.AspectRatio,5:3)">
+			<param name="panel-posx">40</param>
+			<param name="panel-posy">20</param>
+			<param name="panel-width">780</param>
+			<param name="panel-height">440</param>
 			<param name="layout-width">400</param>
 		</include>
 		<include>Header</include>

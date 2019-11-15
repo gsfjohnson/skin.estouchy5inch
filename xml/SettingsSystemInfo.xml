@@ -22,9 +22,9 @@
 			<control type="grouplist" id="9000">
 				<description>button area</description>
 				<posx>0</posx>
-				<posy>130</posy>
-				<width>390</width>
-				<height>720</height>
+				<posy>0</posy>
+				<width>200</width>
+				<height>480</height>
 				<itemgap>-1</itemgap>
 				<onleft>5</onleft>
 				<onright>60</onright>
@@ -32,7 +32,7 @@
 				<ondown>9000</ondown>
 				<control type="button" id="95">
 					<description>Button Summary Values</description>
-					<width>390</width>
+					<width>200</width>
 					<height>80</height>
 					<aligny>center</aligny>
 					<font>font24_title</font>
@@ -44,7 +44,7 @@
 					<textoffsetx>20</textoffsetx>
 				</control>
 				<control type="button" id="94">
-					<width>390</width>
+					<width>200</width>
 					<height>80</height>
 					<aligny>center</aligny>
 					<font>font24_title</font>
@@ -56,7 +56,7 @@
 					<textoffsetx>20</textoffsetx>
 				</control>
 				<control type="button" id="96">
-					<width>390</width>
+					<width>200</width>
 					<height>80</height>
 					<aligny>center</aligny>
 					<font>font24_title</font>
@@ -68,7 +68,7 @@
 					<textoffsetx>20</textoffsetx>
 				</control>
 				<control type="button" id="97">
-					<width>390</width>
+					<width>200</width>
 					<height>80</height>
 					<aligny>center</aligny>
 					<font>font24_title</font>
@@ -80,7 +80,7 @@
 					<textoffsetx>20</textoffsetx>
 				</control>
 				<control type="button" id="98">
-					<width>390</width>
+					<width>200</width>
 					<height>80</height>
 					<aligny>center</aligny>
 					<font>font24_title</font>
@@ -92,7 +92,7 @@
 					<textoffsetx>20</textoffsetx>
 				</control>
 				<control type="button" id="99">
-					<width>390</width>
+					<width>200</width>
 					<height>80</height>
 					<aligny>center</aligny>
 					<font>font24_title</font>
@@ -104,7 +104,7 @@
 					<textoffsetx>20</textoffsetx>
 				</control>
 				<control type="button" id="100">
-					<width>390</width>
+					<width>200</width>
 					<height>80</height>
 					<aligny>center</aligny>
 					<font>font24_title</font>
@@ -124,25 +124,18 @@
 				<param name="panel-width">890</param>
 				<param name="textbox-width">810</param>
 			</include>
+			<include content="SysInfoContent" condition="String.IsEqual(Skin.AspectRatio,5:3)">
+				<param name="panel-width">680</param>
+				<param name="textbox-width">610</param>
+			</include>
 			<control type="group">
 				<posx>470r</posx>
-				<posy>190r</posy>
-				<control type="label" id="52">
-					<description>Kodi Build Version</description>
-					<posx>330</posx>
-					<posy>10</posy>
-					<width>740</width>
-					<label>144</label>
-					<align>right</align>
-					<textcolor>blue</textcolor>
-					<shadowcolor>black</shadowcolor>
-					<font>font20_title</font>
-				</control>
+				<posy>40r</posy>
 				<control type="label">
 					<description>Memory Text</description>
 					<posx>0</posx>
-					<posy>50</posy>
-					<width>410</width>
+					<posy>0</posy>
+					<width>220</width>
 					<height>25</height>
 					<label>$LOCALIZE[31309] $INFO[system.memory(used.percent)]</label>
 					<align>right</align>
@@ -151,20 +144,12 @@
 					<shadowcolor>black</shadowcolor>
 					<font>font18_title</font>
 				</control>
-				<control type="progress">
-					<description>Memory BAR</description>
-					<posx>10</posx>
-					<posy>50</posy>
-					<width>320</width>
-					<height>25</height>
-					<info>system.memory(used)</info>
-				</control>
 				<control type="label">
 					<description>CPU Text</description>
-					<posx>0</posx>
-					<posy>90</posy>
-					<width>410</width>
-					<height>60</height>
+					<posx>220</posx>
+					<posy>0</posy>
+					<width>220</width>
+					<height>25</height>
 					<label>$LOCALIZE[13271] $INFO[System.CPUUsage]</label>
 					<align>right</align>
 					<aligny>center</aligny>
@@ -173,18 +158,8 @@
 					<font>font18_title</font>
 					<wrapmultiline>true</wrapmultiline>
 				</control>
-				<control type="progress">
-					<description>CPU BAR</description>
-					<posx>10</posx>
-					<posy>90</posy>
-					<width>320</width>
-					<height>25</height>
-					<info>System.CPUUsage</info>
-				</control>
 			</control>
 		</control>
-		<include>Header</include>
-		<include>CommonNowPlaying</include>
 		<include>Footer</include>
 		<control type="label">
 			<description>Window label</description>
