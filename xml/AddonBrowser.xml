@@ -44,6 +44,11 @@
 				<param name="label-width" value="790"/>
 				<param name="label2-posx" value="920r"/>
 			</include>
+			<include content="List" condition="String.IsEqual(Skin.AspectRatio,5:3)"> <!-- view id = xx -->
+				<param name="panel-width" value="690"/>
+				<param name="label-width" value="490"/>
+				<param name="label2-posx" value="620r"/>
+			</include>
 			<include content="Wide" condition="String.IsEqual(Skin.AspectRatio,16:9)"> <!-- view id = 550 -->
 				<param name="panel-width" value="1530"/>
 				<param name="textbox-width-movies" value="1350"/>

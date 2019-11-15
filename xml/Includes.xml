@@ -102,13 +102,29 @@
 	<include name="ScreenWidth-5x3">
 		<width>800</width>
 	</include>
+
+	<include name="ScreenHeight">
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9)">ScreenHeight-16x9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">ScreenHeight-4x3</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,5:3)">ScreenHeight-5x3</include>
+	</include>
+	<include name="ScreenHeight-16x9">
+		<height>960</height>
+	</include>
+	<include name="ScreenHeight-4x3">
+		<height>960</height>
+	</include>
+	<include name="ScreenHeight-5x3">
+		<height>480</height>
+	</include>
+
 	<include name="CommonBackground">
 		<control type="image">
 			<posx>0</posx>
 			<posy>0</posy>
 			<aspectratio>scale</aspectratio>
 			<include>ScreenWidth</include>
-			<height>960</height>
+			<include>ScreenHeight</include>
 			<texture colordiffuse="FF006699">special://skin/background/primary.jpg</texture>
 			<visible>!Skin.HasSetting(UseCustomBackground)</visible>
 		</control>
@@ -117,7 +133,7 @@
 			<posy>0</posy>
 			<aspectratio>scale</aspectratio>
 			<include>ScreenWidth</include>
-			<height>960</height>
+			<include>ScreenHeight</include>
 			<texture colordiffuse="60FFFFFF">$INFO[Skin.String(CustomBackground)]</texture>
 			<visible>Skin.HasSetting(UseCustomBackground)</visible>
 		</control>
@@ -125,7 +141,7 @@
 			<posx>0</posx>
 			<posy>0</posy>
 			<include>ScreenWidth</include>
-			<height>960</height>
+			<include>ScreenHeight</include>
 			<texture background="true">$INFO[Container.Art(tvshow.fanart)]</texture>
 			<aspectratio>scale</aspectratio>
 			<fadetime>FanartCrossfadeTime</fadetime>
@@ -135,7 +151,7 @@
 			<posx>0</posx>
 			<posy>0</posy>
 			<include>ScreenWidth</include>
-			<height>960</height>
+			<include>ScreenHeight</include>
 			<texture background="true">$INFO[Container.Art(artist.fanart)]</texture>
 			<aspectratio>scale</aspectratio>
 			<fadetime>FanartCrossfadeTime</fadetime>
@@ -145,7 +161,7 @@
 			<posx>0</posx>
 			<posy>0</posy>
 			<include>ScreenWidth</include>
-			<height>960</height>
+			<include>ScreenHeight</include>
 			<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
 			<aspectratio>scale</aspectratio>
 			<fadetime>FanartCrossfadeTime</fadetime>
@@ -156,7 +172,7 @@
 			<posx>0</posx>
 			<posy>0</posy>
 			<include>ScreenWidth</include>
-			<height>960</height>
+			<include>ScreenHeight</include>
 			<texture background="true">$INFO[Player.Art(fanart)]</texture>
 			<aspectratio>scale</aspectratio>
 			<fadetime>FanartCrossfadeTime</fadetime>
@@ -166,7 +182,7 @@
 			<posx>0</posx>
 			<posy>0</posy>
 			<include>ScreenWidth</include>
-			<height>960</height>
+			<include>ScreenHeight</include>
 			<texture>black.png</texture>
 			<colordiffuse>90000000</colordiffuse>
 			<include>VisibleFadeEffect</include>
@@ -177,7 +193,7 @@
 			<posy>0</posy>
 			<aspectratio>scale</aspectratio>
 			<include>ScreenWidth</include>
-			<height>960</height>
+			<include>ScreenHeight</include>
 			<texture colordiffuse="4D24CCA2">special://skin/background/secondary1.png</texture>
 			<visible>!Skin.HasSetting(UseCustomBackground)</visible>
 		</control>
@@ -185,14 +201,14 @@
 			<posx>0</posx>
 			<posy>0</posy>
 			<include>ScreenWidth</include>
-			<height>960</height>
+			<include>ScreenHeight</include>
 			<visible>!Skin.HasSetting(HideVideoBackground) + Player.HasVideo + !Window.IsVisible(TVChannels) + !Window.IsVisible(RadioChannels) + !Window.IsVisible(TVGuide) + !Window.IsVisible(RadioGuide) + !Window.IsVisible(TVSearch) + !Window.IsVisible(RadioSearch) + !Window.IsVisible(TVTimers) + !Window.IsVisible(RadioTimers) + !Window.IsVisible(TVTimerRules) + !Window.IsVisible(RadioTimerRules) + !Window.IsVisible(TVRecordings) + !Window.IsVisible(RadioRecordings) + !SlideShow.IsActive</visible>
 		</control>
 		<control type="visualisation">
 			<posx>0</posx>
 			<posy>0</posy>
 			<include>ScreenWidth</include>
-			<height>960</height>
+			<include>ScreenHeight</include>
 			<visible>!Skin.HasSetting(HideVizBackground) + Player.HasAudio + !SlideShow.IsActive</visible>
 		</control>
 	</include>
@@ -2180,25 +2196,16 @@
 		</control>
 	</include>
 	<include name="SysInfoContent">
-		<control type="image">
-			<posx>390</posx>
-			<posy>130</posy>
-			<width>$PARAM[panel-width]</width>
-			<height>2</height>
-			<texture border="2">separator.png</texture>
-			<colordiffuse>blue</colordiffuse>
-		</control>
 		<control type="group">
-			<posx>390</posx>
-			<posy>133</posy>
+			<posx>220</posx>
+			<posy>10</posy>
 			<width>$PARAM[panel-width]</width>
-			<height>720</height>
+			<height>480</height>
 			<control type="label" id="2">
 				<description>Label 2</description>
-				<posx>20</posx>
 				<posy>0</posy>
 				<width>$PARAM[panel-width]</width>
-				<height>60</height>
+				<height>40</height>
 				<align>left</align>
 				<aligny>center</aligny>
 				<label></label>
@@ -2206,10 +2213,9 @@
 			</control>
 			<control type="label" id="3">
 				<description>Label 3</description>
-				<posx>20</posx>
-				<posy>60</posy>
+				<posy>40</posy>
 				<width>$PARAM[panel-width]</width>
-				<height>60</height>
+				<height>40</height>
 				<align>left</align>
 				<aligny>center</aligny>
 				<label></label>
@@ -2217,10 +2223,9 @@
 			</control>
 			<control type="label" id="4">
 				<description>Label 4</description>
-				<posx>20</posx>
-				<posy>120</posy>
+				<posy>80</posy>
 				<width>$PARAM[panel-width]</width>
-				<height>60</height>
+				<height>40</height>
 				<align>left</align>
 				<aligny>center</aligny>
 				<label></label>
@@ -2228,10 +2233,9 @@
 			</control>
 			<control type="label" id="5">
 				<description>Label 5</description>
-				<posx>20</posx>
-				<posy>180</posy>
+				<posy>120</posy>
 				<width>$PARAM[panel-width]</width>
-				<height>60</height>
+				<height>40</height>
 				<align>left</align>
 				<aligny>center</aligny>
 				<label></label>
@@ -2239,10 +2243,9 @@
 			</control>
 			<control type="label" id="6">
 				<description>Label 6</description>
-				<posx>20</posx>
-				<posy>240</posy>
+				<posy>160</posy>
 				<width>$PARAM[panel-width]</width>
-				<height>60</height>
+				<height>40</height>
 				<align>left</align>
 				<aligny>center</aligny>
 				<label></label>
@@ -2250,10 +2253,9 @@
 			</control>
 			<control type="label" id="7">
 				<description>Label 7</description>
-				<posx>20</posx>
-				<posy>300</posy>
+				<posy>200</posy>
 				<width>$PARAM[panel-width]</width>
-				<height>60</height>
+				<height>40</height>
 				<align>left</align>
 				<aligny>center</aligny>
 				<label></label>
@@ -2261,10 +2263,9 @@
 			</control>
 			<control type="label" id="8">
 				<description>Label 8</description>
-				<posx>20</posx>
-				<posy>360</posy>
+				<posy>240</posy>
 				<width>$PARAM[panel-width]</width>
-				<height>60</height>
+				<height>40</height>
 				<align>left</align>
 				<aligny>center</aligny>
 				<label></label>
@@ -2272,10 +2273,9 @@
 			</control>
 			<control type="label" id="9">
 				<description>Label 9</description>
-				<posx>20</posx>
-				<posy>420</posy>
+				<posy>280</posy>
 				<width>$PARAM[panel-width]</width>
-				<height>60</height>
+				<height>40</height>
 				<align>left</align>
 				<aligny>center</aligny>
 				<label></label>
@@ -2283,10 +2283,9 @@
 			</control>
 			<control type="label" id="10">
 				<description>Label 10</description>
-				<posx>20</posx>
-				<posy>480</posy>
+				<posy>320</posy>
 				<width>$PARAM[panel-width]</width>
-				<height>60</height>
+				<height>40</height>
 				<align>left</align>
 				<aligny>center</aligny>
 				<label></label>
@@ -2294,10 +2293,9 @@
 			</control>
 			<control type="label" id="11">
 				<description>Label 11</description>
-				<posx>20</posx>
-				<posy>540</posy>
+				<posy>360</posy>
 				<width>$PARAM[panel-width]</width>
-				<height>60</height>
+				<height>40</height>
 				<align>left</align>
 				<aligny>center</aligny>
 				<label></label>
@@ -2305,18 +2303,18 @@
 			</control>
 		</control>
 		<control type="textbox" id="30">
-			<posx>410</posx>
-			<posy>150</posy>
+			<posx>220</posx>
+			<posy>10</posy>
 			<width>$PARAM[textbox-width]</width>
-			<height>620</height>
+			<height>400</height>
 			<pagecontrol>60</pagecontrol>
 			<autoscroll delay="5000" repeat="7500" time="5000">true</autoscroll>
 		</control>
 		<control type="scrollbar" id="60">
 			<posx>50r</posx>
-			<posy>150</posy>
+			<posy>10</posy>
 			<width>26</width>
-			<height>610</height>
+			<height>400</height>
 			<texturesliderbackground colordiffuse="30FFFFFF">white.png</texturesliderbackground>
 			<texturesliderbar colordiffuse="grey">white.png</texturesliderbar>
 			<texturesliderbarfocus colordiffuse="blue">white.png</texturesliderbarfocus>
@@ -2328,14 +2326,6 @@
 			<animation effect="fade" time="150">Visible</animation>
 			<animation effect="fade" time="150">Hidden</animation>
 			<visible>Control.IsVisible(30)</visible>
-		</control>
-		<control type="image">
-			<posx>390</posx>
-			<posy>774</posy>
-			<width>$PARAM[panel-width]</width>
-			<height>2</height>
-			<texture border="2">separator.png</texture>
-			<colordiffuse>blue</colordiffuse>
 		</control>
 	</include>
 	<include name="VideosMenu">
