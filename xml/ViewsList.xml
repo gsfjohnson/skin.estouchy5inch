@@ -2,30 +2,20 @@
 <includes>
 	<include name="List">
 		<control type="image">
-			<posx>115</posx>
-			<posy>125</posy>
-			<width>1540</width>
-			<height>710</height>
+			<posx>$PARAM[panel-posx]</posx>
+			<posy>$PARAM[panel-posy]</posy>
+			<width>$PARAM[panel-width]</width>
+			<height>$PARAM[panel-height]</height>
 			<texture>back.png</texture>
 			<bordertexture border="6">panel_shadow.png</bordertexture>
 			<bordersize>5</bordersize>
-			<visible>String.IsEqual(Skin.AspectRatio,16:9) + Control.IsVisible(500)</visible>
-		</control>
-		<control type="image">
-			<posx>115</posx>
-			<posy>125</posy>
-			<width>1100</width>
-			<height>710</height>
-			<texture>back.png</texture>
-			<bordertexture border="6">panel_shadow.png</bordertexture>
-			<bordersize>5</bordersize>
-			<visible>String.IsEqual(Skin.AspectRatio,4:3) + Control.IsVisible(500)</visible>
+			<visible>Control.IsVisible(500)</visible>
 		</control>
 		<control type="panel" id="500">
-			<posx>120</posx>
-			<posy>130</posy>
+			<posx>$PARAM[panel-posx]</posx>
+			<posy>$PARAM[panel-posy]</posy>
 			<width>$PARAM[panel-width]</width>
-			<height>700</height>
+			<height>$PARAM[panel-height]</height>
 			<onleft>2</onleft>
 			<onright>60</onright>
 			<onup>500</onup>
