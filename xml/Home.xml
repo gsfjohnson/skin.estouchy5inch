@@ -137,6 +137,7 @@
 			<animation effect="slide" end="0,0" start="-1040,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
 			<include>HomeMenu</include>
 			<control type="panel" id="9002">
+				<description>Settings and File Manager</description>
 				<posx>5</posx>
 				<posy>0</posy>
 				<animation effect="fade" start="100" end="0" time="300" condition="Window.Next(Home)">WindowClose</animation>

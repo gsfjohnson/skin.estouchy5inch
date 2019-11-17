@@ -19,13 +19,21 @@
 			<param name="layout-width">400</param>
 		</include>
 		<include content="SettingsPanel" condition="String.IsEqual(Skin.AspectRatio,5:3)">
-			<param name="panel-posx">40</param>
-			<param name="panel-posy">20</param>
-			<param name="panel-width">780</param>
-			<param name="panel-height">440</param>
-			<param name="layout-width">400</param>
+			<param name="panel-posx">20</param>
+			<param name="panel-posy">10</param>
+			<param name="panel-width">760</param>
+			<param name="panel-height">420</param>
+			<param name="layout-width">180</param>
+			<param name="layout-height">180</param>
+			<param name="item-width">150</param>
+			<param name="item-height">150</param>
+			<param name="icon-width">180</param>
+			<param name="icon-height">180</param>
+			<param name="text-posx">0</param>
+			<param name="text-posy">140</param>
+			<param name="text-width">150</param>
+			<param name="text-height">50</param>
 		</include>
-		<include>Header</include>
 		<include>CommonNowPlaying</include>
 		<include>Footer</include>
 		<control type="textbox">
