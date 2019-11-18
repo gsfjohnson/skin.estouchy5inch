@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<onload condition="Window.IsVisible(yesnodialog)">SetFocus(10)</onload>
+	<onload condition="Window.IsVisible(yesnodialog)">SetFocus(9000)</onload>
 	<coordinates>
-		<posx>290</posx>
-		<posy>300</posy>
+		<posx>50</posx>
+		<posy>70</posy>
 	</coordinates>
-	<include>16x9_xPos_Relocation</include>
 	<include>dialogeffect</include>
 	<controls>
 		<include>BehindDialogFadeOut</include>

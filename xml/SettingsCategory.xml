@@ -12,8 +12,8 @@
 				<description>Menu Panel</description>
 				<posx>-5</posx>
 				<posy>-5</posy>
-				<width>400</width>
-				<height>970</height>
+				<width>250</width>
+				<height>440</height>
 				<texture>panel.png</texture>
 				<bordertexture border="6">panel_shadow.png</bordertexture>
 				<bordersize>5</bordersize>
@@ -21,9 +21,9 @@
 			<control type="grouplist" id="3">
 				<description>button area</description>
 				<posx>0</posx>
-				<posy>130</posy>
-				<width>390</width>
-				<height>720</height>
+				<posy>0</posy>
+				<width>240</width>
+				<height>440</height>
 				<itemgap>-1</itemgap>
 				<onleft>5</onleft>
 				<onright>5</onright>
@@ -37,6 +37,10 @@
 			<include content="SettingsContent" condition="String.IsEqual(Skin.AspectRatio,4:3)">
 				<param name="panel-width">890</param>
 				<param name="textbox-width">860</param>
+			</include>
+			<include content="SettingsContent" condition="String.IsEqual(Skin.AspectRatio,5:3)">
+				<param name="panel-width">550</param>
+				<param name="textbox-width">520</param>
 			</include>
 		</control>
 		<control type="button" id="10">
@@ -123,7 +127,6 @@
 			<font></font>
 			<visible>false</visible>
 		</control>
-		<include>Header</include>
 		<include>CommonNowPlaying</include>
 		<include>Footer</include>
 		<control type="label">
