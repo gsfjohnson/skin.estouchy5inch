@@ -1653,7 +1653,7 @@
 					<description>Sysinfo</description>
 					<label>130</label>
 					<onclick>ActivateWindow(SystemInfo)</onclick>
-					<icon>icon_settings_system.png</icon>
+					<icon>icon_settings_systeminfo.png</icon>
 				</item>
 				<item id="8">
 					<label>24001</label>
