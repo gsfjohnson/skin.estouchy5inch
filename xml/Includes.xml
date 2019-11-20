@@ -1653,7 +1653,7 @@
 					<description>Sysinfo</description>
 					<label>130</label>
 					<onclick>ActivateWindow(SystemInfo)</onclick>
-					<icon>icon_settings_systeminfo.png</icon>
+					<icon>icon_settings_system.png</icon>
 				</item>
 				<item id="8">
 					<label>24001</label>
@@ -1665,20 +1665,12 @@
 		</control>
 	</include>
 	<include name="SkinSettingsContent">
-		<control type="image">
-			<posx>390</posx>
-			<posy>130</posy>
-			<width>$PARAM[panel-width]</width>
-			<height>2</height>
-			<texture border="2">separator.png</texture>
-			<colordiffuse>blue</colordiffuse>
-		</control>
 		<control type="grouplist" id="100">
 			<description>control area</description>
-			<posx>390</posx>
-			<posy>140</posy>
+			<posx>240</posx>
+			<posy>10</posy>
 			<width>$PARAM[panel-width]</width>
-			<height>640</height>
+			<height>410</height>
 			<itemgap>-1</itemgap>
 			<onup>100</onup>
 			<ondown>9002</ondown>
@@ -1858,10 +1850,10 @@
 		</control>
 		<control type="grouplist" id="200">
 			<description>control area</description>
-			<posx>390</posx>
-			<posy>140</posy>
+			<posx>240</posx>
+			<posy>10</posy>
 			<width>$PARAM[panel-width]</width>
-			<height>640</height>
+			<height>410</height>
 			<itemgap>-1</itemgap>
 			<onup>200</onup>
 			<ondown>9002</ondown>
@@ -2096,10 +2088,10 @@
 		</control>
 		<control type="grouplist" id="300">
 			<description>control area</description>
-			<posx>390</posx>
-			<posy>140</posy>
+			<posx>240</posx>
+			<posy>10</posy>
 			<width>$PARAM[panel-width]</width>
-			<height>640</height>
+			<height>410</height>
 			<itemgap>-1</itemgap>
 			<onup>200</onup>
 			<ondown>9002</ondown>
